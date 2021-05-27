@@ -28,15 +28,16 @@ from cinderella.modules.connection import connect_button
 
 PM_START_TEXT = """
 _Hello_ *{}*
-_My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
-_Maintained by_ [{}](tg://user?id={})
+_My name is_ *{}*\n_𝗔 𝗣𝗼𝘄𝗲𝗿𝗳𝘂𝗹 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗣𝗿𝗼𝗕𝗼𝘁 𝘁𝗼 𝗠𝗮𝗻𝗮𝗴𝗲 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽𝘀,𝗳𝗲𝗲𝗹 𝗳𝗿𝗲𝗲 𝘁𝗼 𝗮𝗱𝗱 𝘁𝗼 𝘆𝗼𝘂𝗿 𝗴𝗿𝗼𝘂𝗽𝘀!!_
+_Maintained by_ [{}](tg://user?id={}) This is Bot Of @Team_Avengerz
 """
 
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
 I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
-the things I can help you with.
+the things I can help you with. 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 @HackingburnSJ 𝗮𝗻𝗱 @BusyInHell
+This is Bot Of @Team_Avengerz
 *Main* commands available:
  💠 - /start: start the bot
  💠 - /help: PM's you this message.
@@ -164,7 +165,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("Heya,{} Here..\nHow can I help you? 🙂".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
+        update.effective_message.reply_text("Heya,{} Here..\nWha Help u need from me Bro? 🙂".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))]]))
 
 def send_start(bot, update):
@@ -179,9 +180,9 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="🛡Creator🛡",url="https://t.me/BusyinHell")]]
-    keyboard += [[InlineKeyboardButton(text="🌐Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="⚜️Add Me⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
-    keyboard += [[InlineKeyboardButton(text="🎖Owner",url="https://t.me/HackingburnSj")]]
+    keyboard = [[InlineKeyboardButton(text="🤝𝗛𝗲𝗹𝗽",callback_data="help_back"),InlineKeyboardButton(text=🔰Creator🔰",url="https://t.me/Myfathers22")]]
+    keyboard += [[InlineKeyboardButton(text="🌐𝗖𝗼𝗻𝗻𝗲𝗰𝘁 𝗚𝗿𝗼𝘂𝗽", callback_data="main_connect"),InlineKeyboardButton(text="⚜️𝗔𝗱𝗱 𝗠𝗲⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard += [[InlineKeyboardButton(text="🎖Owner🎖",url="https://t.me/HackingburnSj")]],InlineKeyboardButton(text="🙏𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗚𝗿𝗼𝘂𝗽🙏
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
 
