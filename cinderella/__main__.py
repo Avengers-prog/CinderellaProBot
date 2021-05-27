@@ -180,9 +180,9 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤝𝗛𝗲𝗹𝗽",callback_data="help_back"),InlineKeyboardButton(text=🔰Creator🔰",url="https://t.me/Myfathers22")]]
+    keyboard = [[InlineKeyboardButton(text="🤝𝗛𝗲𝗹𝗽",callback_data="help_back"),InlineKeyboardButton(text😈Creator",url="https://t.me/Myfathers22")]]
     keyboard += [[InlineKeyboardButton(text="🌐𝗖𝗼𝗻𝗻𝗲𝗰𝘁 𝗚𝗿𝗼𝘂𝗽", callback_data="main_connect"),InlineKeyboardButton(text="⚜️𝗔𝗱𝗱 𝗠𝗲⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
-    keyboard += [[InlineKeyboardButton(text="🎖Owner🎖",url="https://t.me/HackingburnSj")]],InlineKeyboardButton(text="🙏𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗚𝗿𝗼𝘂𝗽🙏
+    keyboard += [[InlineKeyboardButton(text="🎖Owner🎖",url="https://t.me/HackingburnSj")]],InlineKeyboardButton(text="🙏𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝗚𝗿𝗼𝘂𝗽🙏,url="https://t.me/Iron_support)]]
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
 
