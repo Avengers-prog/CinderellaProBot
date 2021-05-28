@@ -27,14 +27,14 @@ from cinderella.modules.connection import connect_button
 
 
 PM_START_TEXT = """
-_Hello_ *{}*
-_My name is_ *{}*\n_𝗔 𝗣𝗼𝘄𝗲𝗿𝗳𝘂𝗹 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗣𝗿𝗼𝗕𝗼𝘁 𝘁𝗼 𝗠𝗮𝗻𝗮𝗴𝗲 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽𝘀,𝗳𝗲𝗲𝗹 𝗳𝗿𝗲𝗲 𝘁𝗼 𝗮𝗱𝗱 𝘁𝗼 𝘆𝗼𝘂𝗿 𝗴𝗿𝗼𝘂𝗽𝘀!!_
-_Maintained by_ [{}](tg://user?id={}) This is Bot Of @Team_Avengerz
+Hello {}
+My name is {}\n_𝗔 𝗣𝗼𝘄𝗲𝗿𝗳𝘂𝗹 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗣𝗿𝗼𝗕𝗼𝘁 𝘁𝗼 𝗠𝗮𝗻𝗮𝗴𝗲 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽𝘀,𝗳𝗲𝗲𝗹 𝗳𝗿𝗲𝗲 𝘁𝗼 𝗮𝗱𝗱 𝘁𝗼 𝘆𝗼𝘂𝗿 𝗴𝗿𝗼𝘂𝗽𝘀!!
+Maintained by [{}](tg://user?id={}) This is Bot Of @Team_Avengerz
 """
 
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
+Hey there! My name is {}.
 I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
 the things I can help you with. 𝗖𝗿𝗲𝗮𝘁𝗲𝗱 𝗕𝘆 @HackingburnSJ 𝗮𝗻𝗱 @BusyInHell
 This is Bot Of @Team_Avengerz
