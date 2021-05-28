@@ -40,9 +40,9 @@ I'm a modular group management bot with a few fun extras! Have a look at the fol
 the things I can help you with.
 This is Bot Of @Team_Avengerz
 *Main* commands available:
- 💠 - /start: start the bot
- 💠 - /help: PM's you this message.
- 💠 - /help <module name>: PM's you info about that module.
+ 💠 - /start: 𝐒𝐭𝐚𝐫𝐭 𝐓𝐡𝐞 𝐁𝐨𝐭
+ 💠 - /help: 𝐏𝐌'𝐬 𝐲𝐨𝐮 𝐭𝐡𝐢𝐬 𝐦𝐞𝐬𝐬𝐚𝐠𝐞.
+ 💠 - /help <module name>: 𝐏𝐌'𝐬 𝐲𝐨𝐮 𝐢𝐧𝐟𝐨 𝐚𝐛𝐨𝐮𝐭 𝐭𝐡𝐚𝐭 𝐦𝐨𝐝𝐮𝐥𝐞.
  💠 - /source: U cant get my src bsdk.
  💠 - /settings:
    🔹 - in PM: will send you your settings for all supported modules.
@@ -280,10 +280,10 @@ def get_help(bot: Bot, update: Update):
     # ONLY send help in PM
     if chat.type != chat.PRIVATE:
 
-        update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
+        update.effective_message.reply_text("Message me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="🛡Contact Creator",url="https://t.me/Surv_ivor")]]))
+                                                [InlineKeyboardButton(text="🛡Contact Creator",url="https://t.me/HackingburnSJ")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
