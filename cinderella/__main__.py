@@ -128,7 +128,7 @@ def send_help(chat_id, text, keyboard=None):
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     dispatcher.bot.send_message(chat_id=chat_id,
                                 text=text,
-                                parse_mode=ParseMode,
+                                
                                 reply_markup=keyboard)
 
 
@@ -235,21 +235,21 @@ def help_button(bot: Bot, update: Update):
             text = "Here is the help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
                    + HELPABLE[module].__help__
             query.message.reply_text(text=text,
-                                     parse_mode=ParseMode,
+                                     
                                      reply_markup=InlineKeyboardMarkup(
                                          [[InlineKeyboardButton(text="🚶🏻‍♂️Back🚶🏻‍♂️", callback_data="help_back")]]))
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
             query.message.reply_text(HELP_STRINGS,
-                                     parse_mode=ParseMode,
+                                     
                                      reply_markup=InlineKeyboardMarkup(
                                          paginate_modules(curr_page - 1, HELPABLE, "help")))
 
         elif next_match:
             next_page = int(next_match.group(1))
             query.message.reply_text(HELP_STRINGS,
-                                     parse_mode=ParseMode,
+                                     
                                      reply_markup=InlineKeyboardMarkup(
                                          paginate_modules(next_page + 1, HELPABLE, "help")))
 
@@ -342,7 +342,7 @@ def settings_button(bot: Bot, update: Update):
                                                                                          module].__mod_name__) + \
                    CHAT_SETTINGS[module].__chat_settings__(chat_id, user.id)
             query.message.reply_text(text=text,
-                                     parse_mode=ParseMode,
+                                     
                                      reply_markup=InlineKeyboardMarkup(
                                          [[InlineKeyboardButton(text="🏃🏻‍♂️Back🏃🏻‍♂️",
                                                                 callback_data="stngs_back({})".format(chat_id))]]))
@@ -372,7 +372,7 @@ def settings_button(bot: Bot, update: Update):
             chat = bot.get_chat(chat_id)
             query.message.reply_text(text="Hi there! There are quite a few settings for {} - go ahead and pick what "
                                           "you're interested in.".format(escape_markdown(chat.title)),
-                                     parse_mode=ParseMode,
+                                     
                                      reply_markup=InlineKeyboardMarkup(paginate_modules(0, CHAT_SETTINGS, "stngs",
                                                                                         chat=chat_id)))
 
