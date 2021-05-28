@@ -151,8 +151,8 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="🔰 Supoort Group 🔰",url="https://t.me/Iron_Support")]]
-    keyboard += [[InlineKeyboardButton(text="🌐𝗖𝗼𝗻𝗻𝗲𝗰𝘁 𝗚𝗿𝗼𝘂𝗽", callback_data="main_connect"),InlineKeyboardButton(text="⚜️𝗔𝗱𝗱 𝗠𝗲⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="🔰 Support Group 🔰",url="https://t.me/Iron_Support")]]
+    keyboard += [[InlineKeyboardButton(text="🌐𝗖𝗼𝗻𝗻𝗲𝗰𝘁 𝗚𝗿𝗼𝘂𝗽", callback_data="main_connect"),InlineKeyboardButton(text="❤️𝗔𝗱𝗱 𝗠𝗲❤️",url="t.me/{}?startgroup=true".format(bot.username))]]
     keyboard += [[InlineKeyboardButton(text="⚜️Global Logs⚜️",url="https://t.me/GlogsofIronman")]]
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True)
