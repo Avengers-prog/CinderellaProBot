@@ -342,7 +342,7 @@ def settings_button(bot: Bot, update: Update):
                                                                                          module].__mod_name__) + \
                    CHAT_SETTINGS[module].__chat_settings__(chat_id, user.id)
             query.message.reply_text(text=text,
-                                     parse_mode=ParseMode.,
+                                     parse_mode=ParseMode,
                                      reply_markup=InlineKeyboardMarkup(
                                          [[InlineKeyboardButton(text="🏃🏻‍♂️Back🏃🏻‍♂️",
                                                                 callback_data="stngs_back({})".format(chat_id))]]))
@@ -372,7 +372,7 @@ def settings_button(bot: Bot, update: Update):
             chat = bot.get_chat(chat_id)
             query.message.reply_text(text="Hi there! There are quite a few settings for {} - go ahead and pick what "
                                           "you're interested in.".format(escape_(chat.title)),
-                                     parse_mode=ParseMode.,
+                                     parse_mode=ParseMode,
                                      reply_markup=InlineKeyboardMarkup(paginate_modules(0, CHAT_SETTINGS, "stngs",
                                                                                         chat=chat_id)))
 
@@ -440,11 +440,11 @@ def source(bot: Bot, update: Update):
     chat = update.effective_chat  # type: Optional[Chat]
 
     if chat.type == "private":
-        update.effective_message.reply_text(SOURCE_STRING, parse_mode=ParseMode.)
+        update.effective_message.reply_text(SOURCE_STRING, parse_mode=ParseMode)
 
     else:
         try:
-            bot.send_message(user.id, SOURCE_STRING, parse_mode=ParseMode.)
+            bot.send_message(user.id, SOURCE_STRING, parse_mode=ParseMode)
 
             update.effective_message.reply_text("You'll find in PM more info about my sourcecode.")
         except Unauthorized:
@@ -481,7 +481,7 @@ def imdb_searchdata(bot: Bot, update: Update):
     movie_data = '*%s*, _%s_\n★ *%s*\n\n%s' % (title, date, rating, synopsis)
     query_raw.edit_message_text(
         movie_data, 
-        parse_mode=ParseMode.
+        parse_mode=ParseMode
     )
 
 @run_async
