@@ -301,11 +301,11 @@ def send_settings(chat_id, user_id, user=False):
             settings = "\n\n".join(
                 "*{}*:\n{}".format(mod.__mod_name__, mod.__user_settings__(user_id)) for mod in USER_SETTINGS.values())
             dispatcher.bot.send_message(user_id, "These are your current settings:" + "\n\n" + settings,
-                                        parse_mode=ParseMode.)
+                                        parse_mode=ParseMode)
 
         else:
             dispatcher.bot.send_message(user_id, "Seems like there aren't any user specific settings available :'(",
-                                        parse_mode=ParseMode.)
+                                        parse_mode=ParseMode)
 
     else:
         if CHAT_SETTINGS:
@@ -318,7 +318,7 @@ def send_settings(chat_id, user_id, user=False):
         else:
             dispatcher.bot.send_message(user_id, "Seems like there aren't any chat settings available :'(\nSend this "
                                                  "in a group chat you're admin in to find its current settings!",
-                                        parse_mode=ParseMode.)
+                                        parse_mode=ParseMode)
 
 
     
