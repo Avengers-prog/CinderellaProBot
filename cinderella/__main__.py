@@ -234,7 +234,7 @@ def help_button(bot: Bot, update: Update):
             text = "Here is the help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
                    + HELPABLE[module].__help__
             query.message.reply_text(text=text,
-                                     parse_mode=ParseMode.,
+                                     parse_mode=ParseMode,
                                      reply_markup=InlineKeyboardMarkup(
                                          [[InlineKeyboardButton(text="🚶🏻‍♂️Back🚶🏻‍♂️", callback_data="help_back")]]))
 
