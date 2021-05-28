@@ -30,7 +30,6 @@ PM_START_TEXT = """
 𝐇𝐞𝐥𝐥𝐨 {}
 Mʏ ɴᴀᴍᴇ ɪs {}\n𝗔 𝗣𝗼𝘄𝗲𝗿𝗳𝘂𝗹 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗣𝗿𝗼𝗕𝗼𝘁 𝘁𝗼 𝗠𝗮𝗻𝗮𝗴𝗲 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽𝘀,𝗳𝗲𝗲𝗹 𝗳𝗿𝗲𝗲 𝘁𝗼 𝗮𝗱𝗱 𝘁𝗼 𝘆𝗼𝘂𝗿 𝗴𝗿𝗼𝘂𝗽𝘀!!
 𝗠𝗮𝗶𝗻𝘁𝗮𝗶𝗻𝗲𝗱 𝗕𝘆 @Team_Avengerz
-𝗠𝗮𝗱𝗲 𝘄𝗶𝘁𝗵 ❤️ 𝗯𝘆 @Rohithaditya 𝗮𝗻𝗱 @HackingburnSJ
 """
 
 
@@ -152,9 +151,9 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="💞Creator",url="https://t.me/Myfathers22")]]
+    keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="🔰 Supoort Group 🔰",url="https://t.me/Iron_Support")]]
     keyboard += [[InlineKeyboardButton(text="🌐𝗖𝗼𝗻𝗻𝗲𝗰𝘁 𝗚𝗿𝗼𝘂𝗽", callback_data="main_connect"),InlineKeyboardButton(text="⚜️𝗔𝗱𝗱 𝗠𝗲⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
-    keyboard += [[InlineKeyboardButton(text="🎖Owner🎖",url="https://t.me/HackingburnSj")]]
+    keyboard += [[InlineKeyboardButton(text="⚜️Global Logs⚜️",url="https://t.me/GlogsofIronman")]]
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True)
 
