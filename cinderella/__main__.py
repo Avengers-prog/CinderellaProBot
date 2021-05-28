@@ -184,7 +184,7 @@ def send_start(bot, update):
     keyboard += [[InlineKeyboardButton(text="🌐𝗖𝗼𝗻𝗻𝗲𝗰𝘁 𝗚𝗿𝗼𝘂𝗽", callback_data="main_connect"),InlineKeyboardButton(text="⚜️𝗔𝗱𝗱 𝗠𝗲⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
     keyboard += [[InlineKeyboardButton(text="🎖Owner🎖",url="https://t.me/HackingburnSj")]]
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_(first_name), escape_(bot.first_name), OWNER_NAME, OWNER_ID), 
-                                         reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.)
+                                         reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode)
 
 
 def m_connect_button(bot, update):
