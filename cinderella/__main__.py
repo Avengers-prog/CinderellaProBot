@@ -440,7 +440,7 @@ def source(bot: Bot, update: Update):
     chat = update.effective_chat  # type: Optional[Chat]
 
     if chat.type == "private":
-        update.effective_message.reply_text(SOURCE_STRING, parse_mode=ParseMode)
+        update.effective_message.reply_text(SOURCE_STRING)
 
     else:
         try:
