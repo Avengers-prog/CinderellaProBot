@@ -59,8 +59,8 @@ def vercheck() -> str:
 
 
 SOURCE_STRING = """
-⚡I'm built in python3, using the python-telegram-bot library, and can manage ur group easily
-⚡JA NA LAVDE U CANT CLONE ME 😂😂
+I'm built in python3, using the python-telegram-bot library, and can manage ur group easily
+JA NA LAVDE U CANT CLONE ME
 """
 
 
@@ -184,7 +184,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("Heya,{} Here..\nWha Help u need from me Bro? 🙂".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
+        update.effective_message.reply_text("Heya,{} Here..\nWhat Help u need from me Bro? 🙂".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))]]))
       
       
