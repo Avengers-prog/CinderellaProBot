@@ -40,7 +40,34 @@ def is_bot_admin(chat: Chat, bot_id: int, bot_member: ChatMember = None) -> bool
 
     return bot_member.status in ('administrator', 'creator')
 
+def bot_admin(func):
+    @wraps(func)
+    def is_admin(bot: Bot, update: Update, *args, **kwargs):
+        if is_bot_admin(update.effective_chat, bot.id):
+            return func(bot, update, *args, **kwargs)
+        else:
+            update.effective_message.reply_text("I'm not admin!")
 
+    return is_admin
+
+
+def user_admin(func):
+    @wraps(func)
+    def is_admin(bot: Bot, update: Update, *args, **kwargs):
+        user = update.effective_user  # type: Optional[User]
+        if user and is_user_admin(update.effective_chat, user.id):
+            return func(bot, update, *args, **kwargs)
+
+        elif not user:
+            pass
+
+        elif DEL_CMDS and " " not in update.effective_message.text:
+            update.effective_message.delete()
+
+        else:
+            update.effective_message.reply_text("Who dis non-admin telling me what to do?")
+
+    return is_admin
 def can_delete(chat: Chat, bot_id: int) -> bool:
     return chat.get_member(bot_id).can_delete_messages
 
@@ -307,6 +334,21 @@ def connection_status(func):
 
     return connected_status
 
+def promote_permission(func):	
+    @wraps(func)	
+    def rohith(bot: Bot, update: Update, *args, **kwargs):		
+        user = update.effective_user.id	
+        member = update.effective_chat.get_member(user)	
+
+        if not (member.can_promote_members or	
+                member.status == "creator") and not user in DEV_USERS:	
+            update.effective_message.reply_text(	
+                "You are missing the following rights to use this command:CanPromoteUsers.")	
+            return ""	
+
+        return func(bot, update, *args, **kwargs)	
+
+    return rohith
 
 #Workaround for circular import with connection.py
 from cinderella.modules import connection
