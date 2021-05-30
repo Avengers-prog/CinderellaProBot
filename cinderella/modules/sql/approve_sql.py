@@ -6,7 +6,7 @@ import threading
 
 from sqlalchemy import Column, String, Boolean, UnicodeText, Integer, func, distinct
 
-from tg_bot.modules.sql import BASE, SESSION
+from cinderella.modules.sql import BASE, SESSION
 
 
 class Approvals(BASE):
