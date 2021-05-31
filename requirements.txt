@@ -39,6 +39,7 @@ parsel
 hurry.filesize
 spamwatch
 pySmartDL
+pyrogram
 youtube-dl
 bs4
 pybase64
