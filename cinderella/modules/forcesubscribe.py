@@ -10,8 +10,8 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from cinderella import DEV_USERS as SUDO_USERS
-from cinderella import pgram
+from cinderella import SUDO_USERS
+
 from cinderella.modules.sql import forcesubscribe_sql as sql
 
 logging.basicConfig(level=logging.INFO)
