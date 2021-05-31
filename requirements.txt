@@ -1,4 +1,5 @@
 Telethon==1.16.4
+envparse
 future
 emoji
 beautifulsoup4
