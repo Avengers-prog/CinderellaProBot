@@ -6,6 +6,18 @@ def get_user_list(config, key):
     with open('{}/cinderella/{}'.format(os.getcwd(), config), 'r') as json_file:
         return json.load(json_file)[key]
     
+ DEFAULTS = {
+    "LOAD_MODULES": True,
+    "DEBUG_MODE": True,
+    "REDIS_HOST": "localhost",
+    "REDIS_PORT": 6379,
+    "REDIS_DB_FSM": 1,
+    "MONGODB_URI": "localhost",
+    "MONGO_DB": "DaisyX",
+    "API_PORT": 8080,
+    "JOIN_CONFIRM_DURATION": "30m",
+}
+   
 def get_str_key(name, required=False):
     if name in DEFAULTS:
         default = DEFAULTS[name]
