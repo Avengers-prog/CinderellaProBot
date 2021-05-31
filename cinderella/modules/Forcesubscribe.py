@@ -20,8 +20,20 @@ static_data_filter = filters.create(
     lambda _, __, query: query.data == "onUnMuteRequest"
 )
 
+TOKEN = get_str_key("TOKEN", required=True)
+APP_ID = get_int_key("APP_ID", required=True)
+APP_HASH = get_str_key("APP_HASH", required=True)
+session_name = TOKEN.split(":")[0]
 
-@Client.on_callback_query(static_data_filter)
+phuk = Client(
+    session_name,
+    api_id=APP_ID,
+    api_hash=APP_HASH,
+    bot_token=TOKEN,
+)
+phuk.start()
+
+@phuk.on_callback_query(static_data_filter)
 def _onUnMuteRequest(client, cb):
     user_id = cb.from_user.id
     chat_id = cb.message.chat.id
@@ -67,7 +79,7 @@ def _onUnMuteRequest(client, cb):
                 )
 
 
-@Client.on_message(filters.text & ~filters.private & ~filters.edited, group=1)
+@phuk.on_message(filters.text & ~filters.private & ~filters.edited, group=1)
 def _check_member(client, message):
     chat_id = message.chat.id
     chat_db = sql.fs_settings(chat_id)
@@ -113,7 +125,7 @@ def _check_member(client, message):
                 )
 
 
-@Client.on_message(filters.command(["forcesubscribe", "fsub"]) & ~filters.private)
+@phuk.on_message(filters.command(["forcesubscribe", "fsub"]) & ~filters.private)
 def config(client, message):
     user = client.get_chat_member(message.chat.id, message.from_user.id)
     if user.status is "creator" or user.user.id in SUDO_USERS:
@@ -188,4 +200,4 @@ Note: Only creator of the group can setup me and i will not allow force subscrib
 Note: /FSub is an alias of /forcesubscribe
  
 """
-__mod_name__ = "Subscribe"
+__mod_name__ = "Fsub"
