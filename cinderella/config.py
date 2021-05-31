@@ -1,6 +1,7 @@
 # Create a new config.py or rename this to config.py file in same dir and import, then extend this class.
 import json
 import os
+from envparse import env
 
 def get_user_list(config, key):
     with open('{}/cinderella/{}'.format(os.getcwd(), config), 'r') as json_file:
