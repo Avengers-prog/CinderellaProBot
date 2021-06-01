@@ -86,7 +86,7 @@ if ENV:
     SW_API = os.environ.get('SW_API', None)
     TELETHON_ID = int(os.environ.get("TL_APP_ID", None))
     TELETHON_HASH = os.environ.get("TL_HASH", None)
-    
+    SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
 else:
     from cinderella.config import Development as Config
     TOKEN = Config.API_KEY
