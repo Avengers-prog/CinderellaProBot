@@ -135,7 +135,6 @@ kbbi
 feedparser
 gtts
 alphabet_detector
-psycopg2-binary
 tswift
 pynewtonmath
 #memes vvv
