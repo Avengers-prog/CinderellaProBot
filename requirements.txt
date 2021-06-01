@@ -3,7 +3,7 @@ telethon
 pyrogram>=1.0.7
 aiogram
 telegram.py
-telegram-python-bot
+python-telegram-bot
 # DBs
 redis
 aioredis # Redis memery storage fom aiogram
