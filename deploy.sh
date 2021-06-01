@@ -1,11 +1,9 @@
 
 echo "
 *********** STARTING DEPLOY ***********
-
-DAISYX v2 -Base Aiogram
-(C) 2020-2021 by @TEAMDAISYX
-Support Chat is @DAISYSUPPORT_OFFICIAL.
-
+IronMusic -Base Aiogram
+© 2021-2022 by @I_AM_DIK
+Support Chat is @Iron_support
 ***************************************
 "
 update_and_install_packages () {
@@ -30,15 +28,13 @@ ech_final () {
     echo "
     
 =++---------------------------------------------++=
-DAISYX. Deployed Successfully
-
+IronMusic. Deployed Successfully
  ***************************
- * |D| |A| |I| |S| |Y| |X| *
- ******************* v2.0 ** 
-
-Thanks for deploying DaisyX
-(C) 2020-2021 by @TEAMDAISYX
-Support Chat is @DAISYSUPPORT_OFFICIAL.
+ * |I| |R| |O| |N| |M| |U| |S| |I| |C|*
+ ******************* v1.0 ** 
+Thanks for deploying IronMusic
+(C) 2020-2021 by @I_AM_DIK
+Support Chat is @Iron_support
 =++---------------------------------------------++=
                        Greetings from dev team :)
     "
