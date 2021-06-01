@@ -2,7 +2,7 @@
 telethon
 pyrogram>=1.0.7
 aiogram
-
+telegram.ext
 # DBs
 redis
 aioredis # Redis memery storage fom aiogram
