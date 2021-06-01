@@ -1,16 +1,13 @@
 # General
-telethon
 pyrogram>=1.0.7
 aiogram
-telegram.py
-python-telegram-bot
+
 # DBs
 redis
 aioredis # Redis memery storage fom aiogram
 pymongo
 motor
 odmantic # MongoDB ORM
-sqlalchemy==1.3.20 # For old modules
 dnspython # needed to connect to cloud MongoDB instances
 
 # Optional deps to make bot faster
@@ -24,7 +21,6 @@ envparse
 hypercorn
 aiocron
 apscheduler
-requests
 python-rapidjson
 PyYAML>5.0
 coloredlogs
@@ -37,16 +33,12 @@ bs4
 lxml
 spamwatch
 httpx[http2]
-wikipedia
-coffeehouse
 PyDictionary==2.0.1
 google-trans-new==1.1.9
 hachoir
-telegraph
 faker
 gtts
 geopy
-tswift
 lyricsgenius
 sentry_sdk
 lxml
@@ -80,7 +72,6 @@ zalgo_text
 cowpy 
 fontTools
 nltk
-emoji
 
 #Deezer
 wget
@@ -96,7 +87,6 @@ nudepy
 
 #ImageEditor
 glitch_this
-NumPy
 opencv-python-headless
 Pillow
 
@@ -124,3 +114,55 @@ pygithub
 #
 Skem==0.3.3
 gogoanime-api
+
+
+
+
+Telethon==1.16.4
+future
+emoji
+beautifulsoup4
+telegraph
+requests
+sqlalchemy==1.3.20
+coffeehouse
+python-telegram-bot==11.1.0
+numpy
+urbandict
+pyowm
+wikipedia
+kbbi
+feedparser
+gtts
+alphabet_detector
+psycopg2-binary
+tswift
+pynewtonmath
+#memes vvv
+spongemock
+zalgo-text
+geopy
+nltk
+psutil
+bleach
+aiohttp>=2.2.5
+Pillow>=4.2.0
+CurrencyConverter
+#translator
+googletrans
+jikanpy
+speedtest-cli
+pytz
+parsel
+hurry.filesize
+spamwatch
+pySmartDL
+youtube-dl
+bs4
+pybase64
+hachoir
+validators
+youtube-search-python
+ffmpeg
+git+https://github.com/Sur-vivor/python-markdown2.git
+apscheduler
