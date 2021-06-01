@@ -13,7 +13,7 @@ from pyrogram import Client
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Chat, Message, User
 
-from cinderella import OWNER_ID, SUPPORT_CHAT
+from cinderella import OWNER_ID
 from services.pyrogram import pbot
 
 
